@@ -152,4 +152,15 @@
         "request_size": 30,
         "title": "Suspicious Ransomware Extension"
     }
+    
+    },
+    "WLUC29": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the authentication attempts by one source to multiple unique users is performing a password spraying attack. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/passwordspray/",
+        "rag_ok": "real_passwordspray_wluc29.csv",
+        "rag_bad": "bad_passwordspray_wluc29.csv",
+        "cache": "cached_passwordspray_wluc29.csv",
+        "request_size": 30,
+        "title": "Detect Password Spray Attack Behavior From Source"
+    }
 }
