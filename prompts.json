@@ -182,4 +182,14 @@
         "request_size": 30,
         "title": "BITSAdmin Download File/BITS Job Persistence"
     }
+    },
+    "WLUC33": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following process executes an AzureHound command line argument and the file name is an AzureHound related file. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/AzureHound/",
+        "rag_ok": "real_AzureHound_wluc33.csv",
+        "rag_bad": "bad_AzureHound_wluc33.csv",
+        "cache": "cached_AzureHouond_wluc33.csv",
+        "request_size": 30,
+        "title": "Detect AzureHound Command-Line Arguments/Detect AzureHound File Modifications"
+    }
 }
