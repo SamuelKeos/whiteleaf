@@ -162,4 +162,14 @@
         "request_size": 30,
         "title": "Detect Rare Executables"
     }
+    },
+    "WLUC31": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following files are malicious based on the file extension. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/susemailextension/",
+        "rag_ok": "real_susemailextension_wluc31.csv",
+        "rag_bad": "bad_susemailextension_wluc31.csv",
+        "cache": "cached_susemailextension_wluc31.csv",
+        "request_size": 30,
+        "title": "Suspicious Email Attachment Extensions"
+    }
 }
