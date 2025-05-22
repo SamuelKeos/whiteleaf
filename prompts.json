@@ -172,4 +172,14 @@
         "request_size": 30,
         "title": "Suspicious Email Attachment Extensions"
     }
+    },
+    "WLUC32": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following BITS processes are malicious. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/BITSjobs/",
+        "rag_ok": "real_BITSjobs_wluc32.csv",
+        "rag_bad": "bad_BITSjobs_wluc32.csv",
+        "cache": "cached_BITSjobs_wluc32.csv",
+        "request_size": 30,
+        "title": "BITSAdmin Download File/BITS Job Persistence"
+    }
 }
