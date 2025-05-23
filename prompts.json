@@ -192,4 +192,14 @@
         "request_size": 30,
         "title": "Detect AzureHound Command-Line Arguments/Detect AzureHound File Modifications"
     }
+    },
+    "WLUC34": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following processes use the copy command to dump credentials from a shadow copy or create a symlink to a shadow copy. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/CredentialDumping/",
+        "rag_ok": "real_CredentialDumping_wluc34.csv",
+        "rag_bad": "bad_CredentialDumping_wluc34.csv",
+        "cache": "cached_CredentialDumping_wluc34.csv",
+        "request_size": 30,
+        "title": "Credential Dumping via Copy Command from Shadow Copy/Credential Dumping via Symlink to Shadow Copy"
+    }
 }
