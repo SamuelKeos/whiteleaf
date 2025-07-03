@@ -308,16 +308,6 @@
         "title": "AWS Privilege Escalation",
         "cache_time": 43800
     },
-     "WLUC43": {
-       "prompt": "Please determine on a scale from 1-100 the confidence that the following ACL rule deletions or overly broad ingress permission changes are being performed maliciously. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
-        "dir": "./RAG/ACLCreationDeletion/",
-        "rag_ok": "real_ACLCreationDeletion_wluc43.csv",
-        "rag_bad": "bad_ACLCreationDeletion_wluc43.csv",
-        "cache": "cached_CACLCreationDeletion_wluc43.csv",
-        "request_size": 30,
-        "title": "AWS ACL Creation/Deletion",
-        "cache_time": 43800
-    },
     "WLUC42": {
        "prompt": "Please determine on a scale from 1-100 the confidence that the following are malicious group or policy deletions including suspicious failed attempts from non-AWS user agents. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
         "dir": "./RAG/LogDeletion/",
@@ -326,6 +316,16 @@
         "cache": "cached_LogDeletion_wluc42.csv",
         "request_size": 30,
         "title": "AWS IAM Log Deletion",
+        "cache_time": 43800
+    },
+     "WLUC43": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following ACL rule deletions or overly broad ingress permission changes are being performed maliciously. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/ACLCreationDeletion/",
+        "rag_ok": "real_ACLCreationDeletion_wluc43.csv",
+        "rag_bad": "bad_ACLCreationDeletion_wluc43.csv",
+        "cache": "cached_CACLCreationDeletion_wluc43.csv",
+        "request_size": 30,
+        "title": "AWS ACL Creation/Deletion",
         "cache_time": 43800
     },
     "WLUC44": {
