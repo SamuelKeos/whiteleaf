@@ -388,4 +388,31 @@
         "title": "AWS MFA Failure",
         "cache_time": 43800
     }
+     "WLUC50": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following behaviors are malicious authentication attempts to the AWS console. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/AuthOneIPMultiUser/",
+        "rag_ok": "real_AuthOneIPMultiUser_wluc50.csv",
+        "rag_bad": "bad_AuthOneIPMultiUser_wluc50.csv",
+        "cache": "cached_AuthOneIPMultiUser_wluc50.csv",
+        "request_size": 30,
+        "title": "AWS Authentication from One IP to Multiple Users"
+    }
+    "WLUC51": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following unusual AWS cloud events are malicious in nature. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/CloudInstanceCreation/",
+        "rag_ok": "real_CloudInstanceCreation_wluc51.csv",
+        "rag_bad": "bad_CloudInstanceCreation_wluc51.csv",
+        "cache": "cached_CloudInstanceCreation_wluc51.csv",
+        "request_size": 30,
+        "title": "AWS Cloud Instance Creation"
+    }
+     "WLUC52": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following AWS cloud provisioning attempts, initiated from either previously unseen regions, countries, cities, or source IPs (as specified), represent attacker behavior or unauthorized activity. Each line begins with how unique the location of the provision attempt is followed by a >, then the attempting IP address. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/CloudProvisioning/",
+        "rag_ok": "real_CloudProvisioning_wluc52.csv",
+        "rag_bad": "bad_CloudProvisioning_wluc52.csv",
+        "cache": "cached_CloudProvisioning_wluc52.csv",
+        "request_size": 30,
+        "title": "AWS Cloud Provisioning"
+    }
 }
