@@ -387,7 +387,7 @@
         "request_size": 30,
         "title": "AWS MFA Failure",
         "cache_time": 43800
-    }
+    },
      "WLUC50": {
        "prompt": "Please determine on a scale from 1-100 the confidence that the following behaviors are malicious authentication attempts to the AWS console. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
         "dir": "./RAG/AuthOneIPMultiUser/",
@@ -396,7 +396,7 @@
         "cache": "cached_AuthOneIPMultiUser_wluc50.csv",
         "request_size": 30,
         "title": "AWS Authentication from One IP to Multiple Users"
-    }
+    },
     "WLUC51": {
        "prompt": "Please determine on a scale from 1-100 the confidence that the following unusual AWS cloud events are malicious in nature. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
         "dir": "./RAG/CloudInstanceCreation/",
@@ -405,7 +405,7 @@
         "cache": "cached_CloudInstanceCreation_wluc51.csv",
         "request_size": 30,
         "title": "AWS Cloud Instance Creation"
-    }
+    },
      "WLUC52": {
        "prompt": "Please determine on a scale from 1-100 the confidence that the following AWS cloud provisioning attempts, initiated from either previously unseen regions, countries, cities, or source IPs (as specified), represent attacker behavior or unauthorized activity. Each line begins with how unique the location of the provision attempt is followed by a >, then the attempting IP address. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
         "dir": "./RAG/CloudProvisioning/",
@@ -414,5 +414,32 @@
         "cache": "cached_CloudProvisioning_wluc52.csv",
         "request_size": 30,
         "title": "AWS Cloud Provisioning"
+    },
+    "WLUC53": {
+       "prompt": "Please determine on a scale from 1–100 the confidence that each of the following AWS console login events represents suspicious activity based on contextual anomalies in the source IP address. Each prompt contains information about whether the source IP is being seen for the first time from a new geographic location (city, region, or country), or whether it's associated with a new login pattern (such as a first-time user or first-time source). Use this context and the IP reputation to assess how likely each login is to represent malicious or unauthorized behavior. Return only integers, nothing else. Return the results as a newline separated list with no other characters or stylistic elements.",
+        "dir": "./RAG/ConsoleLogin/",
+        "rag_ok": "real_ConsoleLogin_wluc53.csv",
+        "rag_bad": "bad_ConsoleLogin_wluc53.csv",
+        "cache": "cached_ConsoleLogin_wluc53.csv",
+        "request_size": 30,
+        "title": "AWS Console Login"
+    },
+    "WLUC54": {
+       "prompt": "Please determine on a scale from 1–100 how suspicious the following instances are. Each instance is the first time that the provided IP address has accessed a specific S3 bucket within the customer environment. Take into account the IP reputation and physical location of the provided IP addresss. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/S3AccessDetection/",
+        "rag_ok": "real_S3AccessDetection_wluc54.csv",
+        "rag_bad": "bad_S3AccessDetection_wluc54.csv",
+        "cache": "cached_S3AccessDetection_wluc54.csv",
+        "request_size": 30,
+        "title": "AWS S3 Access Detection"
+    },
+    "WLUC55": {
+       "prompt": "Please determine on a scale from 1–100 the likelihood that this activity represents suspicious or potentially malicious behavior. The raw data sent includes the number of DeleteBucket operations executed by a user within a 24-hour window. This is evaluated against their historical activity using interquartile range (IQR)-based statistical outlier detection. Elevated DeleteBucket counts(those significantly exceeding a user's normal deletion pattern) may indicate intentional mass deletion of S3 buckets, which could be symptomatic of insider threats, misconfigurations, or compromised credentials. Please assess the risk based on the unusual volume and context of deletion activity. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/BucketDeletionSpike/",
+        "rag_ok": "real_BucketDeletionSpike_wluc55.csv",
+        "rag_bad": "bad_BucketDeletionSpike_wluc55.csv",
+        "cache": "cached_BucketDeletionSpike_wluc55.csv",
+        "request_size": 30,
+        "title": "AWS Bucket Deletion Spike"
     }
 }
