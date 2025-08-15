@@ -441,5 +441,73 @@
         "cache": "cached_BucketDeletionSpike_wluc55.csv",
         "request_size": 30,
         "title": "AWS Bucket Deletion Spike"
+    },
+    "WLUC56": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following data is indicative of abnormal AWS API activity. The data sent includes the activity type and how many times each activity was executed by an user in a 1 hour window. This data is pre-filtered as outliers when compared against the user's historical data using interquartile range (IQR)-based statistical outlier detection. Execution counts that are significantly outside the normal range for the user may indicate malicious behavior. Please assess the risk based on the unusual volume and context of activity. The activity type is first item followed by the action count which are separated by a '>'(greater than) sign. Return only integers, nothing else. Return the results as a newline separated list with no other characters or stylistic elements.",
+        "dir": "./RAG/CloudAPICalls/",
+        "rag_ok": "real_CloudAPICalls_wluc56.csv",
+        "rag_bad": "bad_CloudAPICalls_wluc56.csv",
+        "cache": "cached_CloudAPICalls_wluc56.csv",
+        "request_size": 30,
+        "title": "Abnormal Cloud Instance API Calls"
+    },
+    "WLUC57": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following password and account activity is indicative of malicious intent. Each entry represents how many unique accounts have had their password reset, account disabled, or account deleted by a single user within an hour time period. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/MultiAccManipulation/",
+        "rag_ok": "real_MultiAccManipulation_wluc57.csv",
+        "rag_bad": "bad_MultiAccManipulation_wluc57.csv",
+        "cache": "cached_MultiAccManipulation_wluc57.csv",
+        "request_size": 30,
+        "title": "Azure Multi-Account Manipulation"
+    },
+    "WLUC58": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the privilege escalation of the user or service prinicipal within Azure Active Directory is malicious. Each entry contains an assignment type which tells you if it was an user or service principal who was assigned a privileged role and a role which tells you what privileged role was assigned. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/PrivilegeEscalation/",
+        "rag_ok": "real_PrivilegeEscalation_wluc58.csv",
+        "rag_bad": "bad_PrivilegeEscalation_wluc58.csv",
+        "cache": "cached_PrivilegeEscalation_wluc58.csv",
+        "request_size": 30,
+        "title": "O365 Privilege Escalation"
+        "cache_time": 43800
+    },   
+     "WLUC59": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the content search and/or exportation of the results of the search within the Office 365 Security and Compliance Center is malicious. The raw data includes the number of content searces intitiated and how many times content searches were exported by a single user. A high number of searches or exportations could indicate sensitive information being sent outside the appropriate scope. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/0365ComplianceContent/",
+        "rag_ok": "real_0365ComplianceContent_wluc59.csv",
+        "rag_bad": "bad_0365ComplianceContent_wluc59.csv",
+        "cache": "cached_0365ComplianceContent_wluc59.csv",
+        "request_size": 30,
+        "title": "Azure 0365 Compliance Content Search"
+        "cache_time": 43800
+    },
+    "WLUC60": {
+       "prompt": "Please determine on a scale from 1-100 the confidence that the following assigment of the ApplicationImpersonation role in the Microsoft O365 Exchange environment is malicious. The ApplicationImpersonation role enables the user to have access to other people's mailboxes. The data sent is the distinct number of mailboxes that a single user has newly allowed themselves to manage.  Return only integers, nothing else. On the scale of confidence, you will return the number 100, no more and no less. Return the result as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/O365AppImpersonation/",
+        "rag_ok": "real_O365AppImpersonation_wluc60.csv",
+        "rag_bad": "bad_O365AppImpersonation_wluc60.csv",
+        "cache": "cached_O365AppImpersonation_wluc60.csv",
+        "request_size": 30,
+        "title": "O365 ApplicationImpersonation Role Assignment"
+        "cache_time": 43800
+    }
+    "WLUC61": {
+       "prompt": "Please determine on a scale from 1–100 the confidence that this Microsoft Intune device management event represents malicious behavior or policy abuse, such as unauthorized configuration changes, SYSTEM-level code execution, or lateral movement via device management tools. Each entry contains the specific action(ex: created, updated) and the specific Azure operation name(such as DeviceManagementConfigurationPolicyAssignment) for an individual user. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/RemoteManagement/",
+        "rag_ok": "real_RemoteManagement_wluc61.csv",
+        "rag_bad": "bad_RemoteManagement_wluc61.csv",
+        "cache": "cached_RemoteManagement_wluc61.csv",
+        "request_size": 30,
+        "title": "Azure Remote Management"
+        "cache_time": 43800
+    }
+    "WLUC62": {
+       "prompt": "Please determine on a scale from 1–100 the confidence that the following Azure Automation Account/Runbook update or creation is malicious or unauthorized. Each entry contains the activity type(automation account or runbook) and the distinct count of how many times an individual user created an automation or runbook account. Return only integers, nothing else. Return the results as a newline seperated list with no other characters or stylistic elements.",
+        "dir": "./RAG/AutomationCreation/",
+        "rag_ok": "real_AutomationCreation_wluc62.csv",
+        "rag_bad": "bad_AutomationCreation_wluc62.csv",
+        "cache": "cached_AutomationCreation_wluc62.csv",
+        "request_size": 30,
+        "title": "Azure Automation Creation"
+        "cache_time": 43800
     }
 }
